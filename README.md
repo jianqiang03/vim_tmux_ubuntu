@@ -1,18 +1,4 @@
-## Solarized Color Scheme For Terminal / iTerm2, Vim, Tmux and SecureCrt
-### Table of Contents
-* [Examples](#examples)
-* [Clone this Repository](#clone-this-repository)
-* [Terminal, Vim, Tmux and SecureCrt for Ubuntu](#terminal-vim-tmux-and-securecrt-for-ubuntu)
-   * [Configuration for Gnome Terminal](#configuration-for-gnome-terminal)
-   * [Configuration for Vim](#configuration-for-vim)
-   * [Configuration for Tmux](#configuration-for-tmux)
-   * [Configuration for SecureCrt](#configuration-for-securecrt)
-* [iTerm2, Vim, Tmux and Securecrt for Mac](#iterm2-vim-tmux-and-securecrt-for-mac)
-   * [Configuration for iTerm2](#configuration-for-iterm2)
-   * [Configuration for Vim](#configuration-for-vim-1)
-   * [Configuration for Tmux](#configuration-for-tmux-1)
-   * [Configuration for SecureCrt](#configuration-for-securecrt-1)
-* [Some Notes on the Plug-ins of Vim](#some-notes-on-the-plug-ins-of-vim)
+## Solarized Color Scheme For Terminal, Vim, Tmux
 
 ### Examples
 - Gnome Terminal
@@ -22,10 +8,10 @@
 
 ### Clone this Repository
 ```
-git clone https://github.com/GoYchen/VIM_TMUX.git ~/VIM_TMUX
+git clone https://github.com/jianqiang03/vim_tmux_ubuntu.git
 ```
 
-### Terminal, Vim, Tmux and SecureCrt for Ubuntu
+### Terminal, Vim, Tmux for Ubuntu
 #### Configuration for Gnome Terminal 
 0. Install Colors and Dircolors following [Anthony25/gnome-terminal-colors-solarized](https://github.com/Anthony25/gnome-terminal-colors-solarized). 
     ```
@@ -51,7 +37,7 @@ git clone https://github.com/GoYchen/VIM_TMUX.git ~/VIM_TMUX
 0. Copy vimrc to `~/.vimrc`
     ```
     # Please remember to backup your own `.vimrc` before overwrite it.
-    cd ~/VIM_TMUX
+    cd ~/vim_tmux_ubuntu
     cp vimrc ~/.vimrc
     ```
 0. Install the plugins
@@ -59,14 +45,10 @@ git clone https://github.com/GoYchen/VIM_TMUX.git ~/VIM_TMUX
     vim ~/.vimrc
     :PluginInstall
     ```
-0. Add the following code in `.vimrc` to correctly display color in Gnome Terminal Vim (already done for you)
+0. Install YouCompleteMe plugin (Optional)
     ```
-    let g:solarized_termcolors=16 
-    set t_Co=16  
-    set background=dark
-    let g:solarized_visibility = "high"
-    let g:solarized_contrast = "high"
-    colorscheme solarized
+    cd ~/.vim/bundle/YouCompleteMe
+    python install.py
     ```
 Now, you can use Vim to edit edit your files with Solarized Color scheme. However, the color does not display correctly when you run Vim inside Tmux.
 
@@ -74,16 +56,6 @@ Now, you can use Vim to edit edit your files with Solarized Color scheme. Howeve
 0. Copy `tmux.conf` to `~/.tmux.conf`
 0. Add `export TERM='screen-256color` in `.bashrc` 
 0. Add `source .bashrc` in `.bash_profile` (Tmux source `.bash_profile` when starting up)
-
-#### Configuration for SecureCrt
-0. Install SecureCrt
-0. Set Terminal Emulation: in `Options -> Global Options -> Default Session -> Edit Default Settings -> Terminal -> Emulation`, choose `Xterm` and `ANSI Color` under `Emulation options`.
-0. Set color scheme to [solarized dark](https://gist.github.com/schmrlng/737c4a1672442bd15b60): open file `~/.vandyke/SecureCRT/Config/Global.ini` and replace the corresponding code patch with the following:
-     ```
-     B:"ANSI Color RGB"=00000040
-      07 36 42 00 dc 32 2f 00 85 99 00 00 b5 89 00 00 26 8b d2 00 d3 36 82 00 2a a1 98 00 ee e8 d5 00
-      00 2b 38 00 cb 4b 16 00 58 6e 75 00 65 7b 83 00 83 94 96 00 6c 71 c4 00 93 a1 a1 00 fd f6 e3 00
-     ```
 
 ### iTerm2, Vim, Tmux and Securecrt for Mac
 #### Configuration for iTerm2
@@ -153,8 +125,6 @@ To install SnipMat plugin, you have to install some dependence
     ````
 
 Hope you enjoy programming with Vim and Tmux. 
-
-**Last Updated: April 23, 2017**
 
 
 
