@@ -17,17 +17,8 @@
 ### Examples
 - Gnome Terminal
   <p align="center">
-   <img src="examples/example.png" width="800")/>
-  </p>     
-
-- SecureCrt
-  <p align="center">
-    <img src="examples/example_crt.png" width="800"/>
-  </p>     
-- iTerm2
-  <p align="center">
-    <img src="examples/example_iterm2.png" width="800"/>
-  </p>     
+   <img src="examples/Screenshot from 2019-02-13 14-17-51.png" width="800")/>
+  </p>   
 
 ### Clone this Repository
 ```
